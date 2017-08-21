@@ -17,6 +17,8 @@ var config = require('./config/config');
     app.set('port', config.port);
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'hbs');
+    var hbs = require('hbs');
+    hbs.registerPartials(__dirname + '/app/views/partials');
 
     const favicon = require('express-favicon');
     app.use(favicon(__dirname + '/public/favicon.png'));

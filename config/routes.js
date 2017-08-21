@@ -6,14 +6,16 @@ module.exports = function(app) {
 	app.get('/', index.index);
 
     var auth = require('../app/controllers/auth');
-    app.get(['/auth','/home'], auth.checksession)
+    app.post('*login', auth.login);
+    app.get('*login', auth.login);
+    app.get(['/auth','/home','/ag'], auth.checksession)
     app.get('/auth/test', auth.test);
-    app.get('/auth/login', auth.login);
-    app.get('/auth/logout', auth.logout);
-    app.post('/auth/login', auth.login);
+    app.get('*logout', auth.logout);
+    app.get('/auth/getUserMenu', auth.getUserMenu);
 
 
- //   var dashboard = require('../app/controllers/test');
+
+    //   var dashboard = require('../app/controllers/test');
  //   app.get('/dashboard', test.dashboard);
 
  //    var test = require('../app/controllers/test');
@@ -24,6 +26,13 @@ module.exports = function(app) {
     var home = require('../app/controllers/home');
     app.get('/home', home.index);
     app.get('/home/test', home.test);
+
+
+    var ag = require('../app/controllers/ag/index');
+    app.get('/ag', ag.index);
+    app.get('/ag/addGuest', ag.addGuest);
+    app.get('/ag/getGuest', ag.getGuest);
+
 
 
 }

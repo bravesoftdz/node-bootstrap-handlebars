@@ -13,7 +13,7 @@ exports.test = function(req, res){
 exports.index = function(req, res){
     //res.render('index', {title: 'TEST'});
 
-    res.render('menu');
+    res.render('dashboard');
 };
 
 exports.logout = function(req, res){

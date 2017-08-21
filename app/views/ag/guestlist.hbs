@@ -1,0 +1,52 @@
+
+<!--
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" id="menu">
+
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../auth/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+-->
+<form action="/ag/addGuest">
+<div class="btn-group">
+    <button type="submit" class="btn btn-primary">Register New Guest</button>
+
+</div>
+</form>
+
+<div id="guestList" class="container">
+    <h2>Guest list</h2>
+    <div class="list-group">
+    {{#each this}}
+        {{#if g_id}} {{! провека на пустую запись}}
+            <a href="/ag/getGuest?g_id={{g_id}}" class="list-group-item">
+                <span class="badge label-primary">карта: {{g_code}}</span>
+                <h4 class="list-group-item-heading">{{g_name}}</h4>
+                <span color="red" class="badge">{{g_email}}</span>
+                <p class="list-group-item-text">{{g_comment}}</p>
+
+            </a>
+
+
+        {{/if}}
+
+
+    {{/each}}
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<!--
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" id="menu">
+
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../auth/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+-->
+<div class="container">
+
+    <h2>Guest params</h2>
+
+
+
+    <form>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-road"></i></span>
+            <input id="g_id" type="text" class="form-control" name="g_id" disabled placeholder="id" value="{{g_id}}">
+
+
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="g_name" type="text" class="form-control" name="g_name" placeholder="Name" value="{{g_name}}">
+        </div>
+<!--
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="g_surname" type="text" class="form-control" name="g_surname" placeholder="Surname" value="{{g_surname}}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="g_lastname" type="text" class="form-control" name="g_lastname" placeholder="Lastname" value="{{g_lastname}}">
+        </div>
+-->
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+            <input id="g_code" type="number" min="0" class="form-control" name="g_code" placeholder="Code" value="{{g_code}}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input id="g_email" type="email" class="form-control" name="g_email" placeholder="Email" value="{{g_email}}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+            <input id="g_phone" type="phone" class="form-control" name="g_phone" placeholder="Phone" value="{{g_phone}}">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+            <textarea id="g_address" name="g_address" placeholder="Address" class="form-control" rows="5">{{g_address}}</textarea>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+            <textarea id="g_comment" name="g_comment" placeholder="Comment" class="form-control" rows="5">{{g_comment}}</textarea>
+        </div>
+
+        <div class="btn-group">
+            <button type="submit" class="btn btn-primary">Create Guest</button>
+        </div>
+
+
+    </form>
+
+</div>
